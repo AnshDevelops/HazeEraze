@@ -22,8 +22,8 @@ class ResideDataset(Dataset):
             self.hazy_dir = os.path.join(root_dir, category, 'hazy')
             self.clear_dir = os.path.join(root_dir, category, 'clear')
 
-        self.hazy_images = [os.path.join(self.hazy_dir, f) for f in os.listdir(self.hazy_dir) if f.endswith('.jpg')]
-        self.clear_images = [os.path.join(self.clear_dir, f) for f in os.listdir(self.clear_dir) if f.endswith('.jpg')]
+        self.hazy_images = [os.path.join(self.hazy_dir, f) for f in os.listdir(self.hazy_dir) if f.endswith('.png')]
+        self.clear_images = [os.path.join(self.clear_dir, f) for f in os.listdir(self.clear_dir) if f.endswith('.png')]
 
     def __len__(self):
         return len(self.hazy_images)
